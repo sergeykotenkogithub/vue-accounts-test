@@ -119,19 +119,19 @@ const remove = () => {
 <style scoped>
 .account-row {
 	display: grid;
-	/* Метки, Тип, Логин, Пароль, Кнопка */
 	grid-template-columns: 1fr 150px 1fr 1fr 40px;
 	gap: 15px;
 	align-items: start;
 	margin-bottom: 10px;
 }
 
-.password-wrapper {
-	min-height: 40px; /* Чтобы сетка не прыгала при скрытии пароля */
+/* Явно подсвечиваем рамку, когда есть ошибка */
+:deep(.is-error .el-input__wrapper) {
+	box-shadow: 0 0 0 1px #f56c6c inset !important; /* Напрямую красный цвет */
 }
 
-/* Красная обводка при ошибке валидации */
-:deep(.is-error .el-input__wrapper) {
-	box-shadow: 0 0 0 1px var(--el-color-danger) inset !important;
+/* Добавим небольшой эффект при фокусе на ошибочном поле */
+:deep(.is-error .el-input__wrapper:hover) {
+	box-shadow: 0 0 0 1px #f56c6c inset !important;
 }
 </style>
