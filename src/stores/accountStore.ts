@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import { v4 as uuidv4 } from 'uuid' // npm install uuid и npm install --save-dev @types/uuid
 
-// Описываем интерфейсы согласно ТЗ
 export interface Label {
 	text: string
 }

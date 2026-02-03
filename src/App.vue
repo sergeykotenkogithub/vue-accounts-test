@@ -2,10 +2,8 @@
 import { useAccountStore } from '@/stores/accountStore'
 import AccountItem from '@/components/AccountItem.vue'
 
-// Подключаем наш стор
 const store = useAccountStore()
 
-// Метод для добавления новой записи через стор
 const addNewAccount = () => {
 	store.addAccount()
 }
